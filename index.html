@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>SI calculator</title>
+    <style>
+        input {
+            height: 30px;
+            border: 3px solid green;
+            margin-top:25px;
+        }
+        label {
+            color:white;
+            font-size:20px;
+
+        }
+        
+    </style>
+</head>
+<body style="background-image:url(money_bg.jpg)">
+    <h1 class="text-center my-5" style="color:rgb(54, 183, 54)"><mark style="background-color:rgb(79, 210, 79)"> Simple Interest Calculator</mark></h1>
+
+    <div class="container d-flex justify-content-center" style="border:4px solid">
+        <div class="row justify-content-center" style="margin-top: 75px">
+            <div class="col mx-5">
+                <label for="Principal" class="">Principal (Rs):</label><br>
+                <input type="number" name="p" id="Principal" class="mt-2">
+            </div>
+            <div class="col mx-5">
+                <label for="Interest">Rate of Interest (%):</label><br>
+                <input type="number" name="" id="Interest" class="mt-2">
+            </div>
+            <div class="col mx-5">
+                <label for="Time">Time (years):</label><br>
+                <input type="number" name="" id="Time" class="mt-2">
+            </div>
+        </div>
+    </div>
+    <div class="container text-center my-5" style="border:4px solid">
+        <button type="button" onclick="SIcalc()" class="">Calculate</button>
+    </div>
+    
+       
+    <p id="result" class="text-center"><mark style="background-color:rgb(79, 210, 79);font-size:25px"> The result is:  </mark> </p>
+    
+   
+    
+    
+    <script>
+        function SIcalc() {
+            var principal = document.getElementById("Principal").value 
+            var interest = document.getElementById('Interest').value
+            var time = document.getElementById('Time').value
+            var si = (Number(principal)*Number(interest)*Number(time))/100
+            document.getElementById('result').innerHTML = "The result is " + si
+        }
+    </script>
+</body>
+</html>
