@@ -16,7 +16,10 @@
             font-size:20px;
 
         }
-        
+        p {
+            font-size:25px;
+
+        }
     </style>
 </head>
 <body style="background-image:url(money_bg.jpg)">
@@ -43,10 +46,10 @@
     </div>
     
        
-    <p id="result" class="text-center"><mark style="background-color:rgb(79, 210, 79);font-size:25px">The result is:</mark></p>
+    <p id="result" style= " width:5cm; margin-left:15.5cm;background-color:rgb(79, 210, 79);" class="text-center">The result is:</p>
     
    
-    
+     
     
     <script>
         function SIcalc() {
@@ -54,7 +57,7 @@
             var interest = document.getElementById('Interest').value
             var time = document.getElementById('Time').value
             var si = (Number(principal)*Number(interest)*Number(time))/100
-            document.getElementById('result').innerHTML = "The result is " + si
+            document.getElementById('result').innerHTML = "The result is Rs" + si
         }
     </script>
 </body>
